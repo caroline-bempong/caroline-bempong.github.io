@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Bempong</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a0c5c115e8.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("3_71zcaDo-sbZdsYk");
+      })();
+    </script>
+  </head>
+  <body class="dark-theme">
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/logo.svg" alt="">
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About Me</a>
+          </li>
+          <li class="nav__link">
+            <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">
+              <i class="fas fa-adjust"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title orange">I'm Caroline.</h1>
+          <p class="header__para mb-8"> I write words that make brands <b class="orange">sound good</b> and <b class="orange">sell better</b>. With a knack for turning ideas into <b class="orange">memorable messages</b>, I put together content that <b class="orange">connects</b>. </p>
+          <div class="flex space-x-6 text-2xl">
+            <a href="https://www.linkedin.com/in/serwaabempong/" target="_blank" class="header__link group">
+                <i class="fa-brands fa-linkedin"></i>
+                <div class="header__link--label">LinkedIn</div>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">About Me.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">I Put Together Content That Connects</h4>
+          <img src="assets/profile-photo.png" alt="Profile Photo" class="project-image object-cover object-center mb-4">
+          <p class="modal__para"> I’ve worked on some amazing brands, including Vodafone, Royal Aroma, Pepsopdent, Ghana Commercial Bank, FanIce, BlueBand, 
+            Unique Insurance Company, Volkswagen, Coca-Cola, Yango Delivery, Ceres, and HD+. </p>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact"> Contact Me </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact"> Need a copywriter who gets it? Let’s chat. </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit"> Send it my way </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success"> Thanks for the message! Looking forward to speaking to you soon. </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative">
+      <div class="container mx-auto max-w-6xl px-4 xs:px-6 py-12 xs:py-16 md:py-20">
+        <div class="row">
+          <h1 class="section__title"><span class="orange">Industries</span> and <span class="orange">Experience</span>
+          </h1>
+          <p class="paragraph paragraph-center"> I write words that make brands <b class="orange">sound good</b> and <b class="orange">sell better</b>. With a knack for turning ideas into <b class="orange">memorable messages</b>, I put together content that <b class="orange">connects</b>. </p>
+        </div>
+      </div>
+    </section>
+    <section class="relative">
+      <div class="container mx-auto max-w-6xl px-4 xs:px-6 py-12 xs:py-16 md:py-20">
+        <div class="row">
+          <h1 class="section__title">What I <span class="orange">Do</span></h1>
+          <ul class="paragraph paragraph-center">
+            <li>- <span class="orange">Television Commercials:</span> Got a message? I’ll turn it into a story people actually want to watch.</li>
+            <li>- <span class="orange">Radio Ads:</span> Short, sweet, and impossible to forget. Let’s make sure your brand is heard (literally).</li>
+            <li>- <span class="orange">Website:</span> Not just words on a page—let’s create a site that speaks to your audience and keeps them clicking.</li>
+            <li>- <span class="orange">Slogans & Taglines:</span> Sum up your brand in few words for endless impact.</li>
+            <li>- <span class="orange">Outdoor Advertising:</span> Big, bold, and to the point. If they’re driving past, they’ll remember it.</li>
+            <li>- <span class="orange">Social Media:</span> From content creation to ad copy that converts, your brand can stand out in the scroll.</li>
+            <li>- <span class="orange">Strategy & Consulting:</span> I help brands get their messaging and image right. Is yours saying the right things in the right places and presenting itself in the right way?</li>
+          </ul>
+        </div>
+      </div>
+    </section>    
+    <section id="projects" class="relative">
+      <div class="container mx-auto max-w-6xl px-4 xs:px-6 py-12 xs:py-16 md:py-20">
+        <div class="row">
+          <h1 class="section__title">Some Cool <span class="orange">Projects</span> I’ve Worked On
+          </h1>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xs:gap-y-12 z-10">
+            <div class="flex flex-col bg-white dark:bg-dark rounded-md overflow-hidden shadow-xl">
+              <figure class="relative pb-[56.25%] overflow-hidden">
+                <a href="https://youtu.be/hv3DLcvxueY?feature=shared" target="_blank">
+                  <img src="assets/pepsodent.png" alt="Pepsodent" class="project-image absolute object-cover object-center">
+                </a>
+              </figure>
+              <div class="flex flex-col p-6 xs:p-8">
+                <h3 class="project__title"> Pepsodent </h3>
+                <p class="project__description"> Wrote Pepsodent Ghana’s first-ever locally produced TV commercial for their 200g Cavity Fighter toothpaste (2024). </p>
+                <div class="flex flex-wrap gap-2">
+                  <a href="https://youtu.be/hv3DLcvxueY?feature=shared" target="_blank" class="project__link">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                    <span>YouTube Video</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col bg-white dark:bg-dark rounded-md overflow-hidden shadow-xl">
+              <figure class="relative pb-[56.25%] overflow-hidden">
+                <a href="https://www.instagram.com/reel/C4NsDJHIgiP/?utm_source=ig_web_copy_link" target="_blank">
+                  <img src="assets/fanice.png" alt="FanIce" class="project-image absolute object-cover object-center">
+                </a>
+              </figure>
+              <div class="flex flex-col p-6 xs:p-8">
+                <h3 class="project__title"> FanIce </h3>
+                <p class="project__description"> Led the <span class="orange">‘FanFlix & Chill’</span> Valentine’s Day digital campaign with an on-ground extension that got people watching movies —and buying ice cream (2024). </p>
+                <div class="flex flex-wrap gap-2">
+                  <a href="https://www.instagram.com/reel/C4NsDJHIgiP/?utm_source=ig_web_copy_link" target="_blank" class="project__link">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                    <span>Instagram Post</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col bg-white dark:bg-dark rounded-md overflow-hidden shadow-xl">
+              <figure class="relative pb-[56.25%] overflow-hidden">
+                <a href="https://youtu.be/qbqa-zuTmrU?si=nJRNRwTucHjoUFDf" target="_blank">
+                  <img src="assets/blue-band.png" alt="Blue Band Ghana " class="project-image absolute object-cover object-center">
+                </a>
+              </figure>
+              <div class="flex flex-col p-6 xs:p-8">
+                <h3 class="project__title"> Blue Band Ghana </h3>
+                <p class="project__description"> Launched a Mother’s Day and Father’s Day campaign that highlighted margarine’s versatility—proving it’s not just for bread but also an essential ingredient for a range of memorable recipes (2023). </p>
+                <div class="flex flex-wrap gap-2">
+                  <a href="https://youtu.be/qbqa-zuTmrU?si=nJRNRwTucHjoUFDf" target="_blank" class="project__link">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                    <span>YouTube Video</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col bg-white dark:bg-dark rounded-md overflow-hidden shadow-xl">
+              <figure class="relative pb-[56.25%] overflow-hidden">
+                <a href="https://youtu.be/vWZjMqIxxKI?feature=shared" target="_blank">
+                  <img src="assets/royal-aroma.png" alt="Royal Aroma" class="project-image absolute object-cover object-center">
+                </a>
+              </figure>
+              <div class="flex flex-col p-6 xs:p-8">
+                <h3 class="project__title"> Royal Aroma </h3>
+                <p class="project__description"> Contributed to the Christmas campaign <span class="orange">‘Obiaa Bedi Bi’</span>, making sure everyone had a plate full and a heart full (2023). </p>
+                <div class="flex flex-wrap gap-2">
+                  <a href="https://youtu.be/vWZjMqIxxKI?feature=shared" target="_blank" class="project__link">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                    <span>YouTube Video</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+              <img src="./assets/logo.svg" class="footer__logo--img" alt="">
+            </figure>
+            <span class="footer__logo--popper"> Top <i class="fas fa-arrow-up"></i>
+            </span>
+          </a>
+          <div class="footer__social--list">
+            <a href="https://www.linkedin.com/in/serwaabempong/" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white"> LinkedIn </a>
+            <a href="#" onclick="toggleModal()" class="footer__social--link link__hover-effect link__hover-effect--white"> Contact </a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; <script>
+              document.write(new Date().getFullYear())
+            </script> Caroline Bempong </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
